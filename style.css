@@ -17,9 +17,14 @@ h1 {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 10px 10%;
     width: 100%;
-    background-color: white;
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,6 +34,7 @@ header {
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
@@ -38,11 +44,11 @@ header {
     font-size: 1.05rem;
 }
 
-.navbar-btn:hover {
-    color: lightskyblue;
+.navbar-btn:hover, .navbar-side-button:hover {
+    color: rgb(146, 248, 79);
 }
 
-.navbar-btn:active {
+.navbar-btn:active, .navbar-side-button:active {
     scale: 0.95;
 }
 
@@ -56,12 +62,13 @@ header {
     text-decoration: none;
 }
 
-.more-button {
+.navbar-side-button {
     display: none;
     background-color: black;
     border: solid;
     border-radius: 0.6rem;
     padding: 0.2rem 0.5rem;
+    margin: 1rem 1rem;
 }
 
 .more-dropdown {
@@ -69,16 +76,8 @@ header {
     position: absolute;
 }
 
-/*secftion {
-    padding: 1% 5%;
-    background-color: white;
-    border: solid;
-    border-radius: 1rem;
-    margin: 5%;
-}*/
-
 .about-section {
-    margin: 5%;
+    margin: 15vh 5% 5% 5%;
 }
 
 .about-section-header {
@@ -91,12 +90,37 @@ header {
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 870px) {
-    .navbar .navbar-btn {
+.navbar-side {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: none;
+}
+
+.navbar-side-btn {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-full {
         display: none;
     }
-    /*.more-button {
+
+    .navbar-side-button {
         display: block;
         float: right;
-    }*/
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navbar-side {
+        width: 100%;
+    }
 }

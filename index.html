@@ -13,11 +13,19 @@
     <header>
         <div class="logo">Frostygames0</div>
         <nav class="navbar">
-            <a class="navbar-btn" href="#about">About Me</a>
-            <a class="navbar-btn" href="#projects">My Projects</a>
-            <a class="navbar-btn" href="#contact">Contact Me</a>
+            <div class="navbar-full">
+                <a class="navbar-btn" href="#about">About Me</a>
+                <a class="navbar-btn" href="#projects">My Projects</a>
+                <a class="navbar-btn" href="#contact">Contact Me</a>
+            </div>
+            <a class="navbar-side-button" onclick="switchSideNavbar(true)"><i class="fa-solid fa-bars"></i></a>
+            <div class="navbar-side">
+                <a class="navbar-side-button" onclick="switchSideNavbar(false)"><i class="fa-solid fa-bars"></i></a>
+                <a class="navbar-btn navbar-side-btn" onclick="switchSideNavbar(false)" href="#about">About Me</a>
+                <a class="navbar-btn navbar-side-btn" onclick="switchSideNavbar(false)" href="#projects">My Projects</a>
+                <a class="navbar-btn navbar-side-btn" onclick="switchSideNavbar(false)" href="#contact">Contact Me</a>
+            </div>
         </nav>
-        <a class="more-button"><i class="fa-solid fa-bars"></i></a>
     </header>
     <section class="about-section" id="about">
         <h1 class="about-section-header">Welcome!</h1>
@@ -34,7 +42,9 @@
             Fusce interdum sem ante, nec lobortis sem ultrices quis. Cras a justo posuere, viverra nibh sit amet, lobortis ligula.
         </p>
     </section>
-    <section id="projects"></section>
+    <section id="projects">
+
+    </section>
     <section id="contact"></section>
     <script src="script.js"></script>
 </body>
